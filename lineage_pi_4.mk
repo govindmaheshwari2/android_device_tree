@@ -1,6 +1,9 @@
-# Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+# Inherit from the common Open Source product configuration
+$(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
+
+# Inherit from hardware-specific part of the product configuration
+$(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 PRODUCT_NAME := raspberry
 PRODUCT_DEVICE := pi_4
