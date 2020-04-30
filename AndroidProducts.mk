@@ -1,3 +1,8 @@
+LOCAL_PATH :=$(call my-dir)
+
+include $(call all-makefiles-under,$(LOCAL_PATH))
+#include device/raspberry/pi_4/tftp.mk
+
 PRODUCT_MAKEFILES += \
 	$(LOCAL_DIR)/lineage_pi_4.mk
 
